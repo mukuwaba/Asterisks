@@ -1,0 +1,37 @@
+
+import java.util.Scanner;
+
+public class AsterisksOutput {
+    public static void main(String [] args){
+
+        //create Scanner to obtain input from the command window (ex:pg 125)
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("This program outputs astericks, ranging from 1 to 100.");
+
+        System.out.print("\nEnter a number: ");
+        int number1 = input.nextInt();
+
+        if (number1 < 1){// (ref: pg. 126)
+            System.out.print("\nNumber is too small. Please enter numbers between 1 to 100.");
+        }//END: if
+
+        if (number1 > 100){// (ref: pg. 126)
+         System.out.print("\nNumber is too big. Please enter numbers between 1 to 100.");
+            System.out.print("\nOnly 100 asterisks were printed. Instead of " +number1+". \To print the correct \n number of asterisks please enter a number within range.");
+        }//END: if
+
+        System.out.println("\nNumber Entered: " +number1);
+
+    //output astericks
+        //(ref: (pg.167), (pg.186)
+    System.out.print("ASTERICK OUTPUT: \n");
+        //Begin loop
+        for(int j= 0; j < number1 && j < 100; j++)//ref:(pg.169,187)
+            //j < number1 | Loop continues until this condition is no longer met
+            //j++ increments variable j by 1
+            //&& conditional AND
+            System.out.print("*");
+        System.out.print("\n" +number1+ " astericks have been printed!");
+    }//END: main
+}//END: Class
